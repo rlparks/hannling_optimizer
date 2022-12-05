@@ -11,4 +11,7 @@ void readHannlingFile(std::vector<Hannling> & hannlings);
 // Reads info from user
 void promptForHannlings(std::vector<Hannling> & hannlings);
 
+// Stores info from prompt into a readable file
+void storeHannlingFile(std::vector<Hannling> hannlings);
+
 #endif
