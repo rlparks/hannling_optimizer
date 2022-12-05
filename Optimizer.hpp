@@ -2,9 +2,13 @@
 #define OPTIMIZER_HPP
 
 #include <string>
+#include <vector>
+#include "Hannling.hpp"
 
-enum Days {
-    wed, thurs, fri, sat, sun, mon, tue
-};
+// Reads info from data file
+void readHannlingFile(std::vector<Hannling> & hannlings);
+
+// Reads info from user
+void promptForHannlings(std::vector<Hannling> & hannlings);
 
 #endif
