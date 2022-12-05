@@ -23,7 +23,7 @@ bool Hannling::isFriend(Hannling * potentialFriend) {
     bool friendHannling = true;
     if (potentialFriend != NULL) {
         for (int i = 0; i < this->enemies.size(); i++) {
-            if (this->enemies[i] == *potentialFriend) {
+            if (this->enemies[i] == potentialFriend->name) {
                 friendHannling = false;
             }
         }

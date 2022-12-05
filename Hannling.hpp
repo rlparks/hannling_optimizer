@@ -6,11 +6,11 @@
 #include "Days.hpp"
 
 class Hannling {
-    std::vector<Hannling> enemies;
-    std::vector<Days> dayBlacklist;
-
     public:
         std::string name;
+        std::vector<std::string> enemies;
+        std::vector<Days> dayBlacklist;
+
         bool canWork(Hannling schedule[7][4], Days day, int shift);
         bool isFriend(Hannling * potentialFriend);
         bool operator==(const Hannling rhs) {

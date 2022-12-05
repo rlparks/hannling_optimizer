@@ -3,11 +3,12 @@
 #include "Days.hpp"
 #include <iostream>
 #include <vector>
+#include <string>
 
 using namespace std;
 
 int main() {
-    cout << "Hannling Optimizer\n------------------\n\n";
+    cout << "Hannling Optimizer <3\n---------------------\n\n";
     cout << "Read from file? (y/n) ";
     char file = 0;
     cin >> file;
@@ -35,5 +36,15 @@ void promptForHannlings(vector<Hannling> & hannlings) {
 
         cout << "Hannling name: ";
         cin >> newHannling.name;
+
+        cout << "Enter blacklist days separated by a space (wed thu fri sat sun mon tue): ";
+        string days{};
+        getline(cin, days);
+        while (days.length() > 2) {
+            string day = days.substr(0, 3);
+            days.erase(0, 4);
+        }
+
+        hannlings.push_back(newHannling);
     }
 }
